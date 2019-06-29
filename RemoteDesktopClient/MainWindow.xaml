@@ -1,0 +1,35 @@
+﻿<Window x:Class="RemoteDesktopClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RemoteDesktopClient"
+        mc:Ignorable="d"
+        Title="RemoteDesktop Client - Načítání..." Height="450" Width="800" Icon="Dakirby309-Windows-8-Metro-Apps-Remote-Desktop-Metro.ico" Loaded="Window_Loaded" >
+    <Grid Name="Content">
+        <DataGrid x:Name="dataGrid" IsReadOnly="True" Margin="10,10,10,37">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header=" Název" Binding="{Binding popis}" Width="*"  />
+                <DataGridTemplateColumn Header=" Stav"  Width="*" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding stav}" Background="{Binding color}" FontWeight="Bold"></Label>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header=" Port" Binding="{Binding port}" Width="*" />
+                <DataGridTemplateColumn Header="Připojit" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="PripojitClick" DataContext="{Binding button}" Content="Připojit"></Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Nastavení" Margin="0,0,10,10" Width="67" Height="27" Click="Button_Click_1" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsEnabled="False"/>
+        <Button Content="Obnovit" HorizontalAlignment="Right" Margin="0,0,82,10" VerticalAlignment="Bottom" Width="75" Height="27" Click="RefreshClicked"/>
+        <Button Content="+" x:Name="PlusButton" Click="PlusClicked" HorizontalAlignment="Left" Margin="10,0,0,7" VerticalAlignment="Bottom" Width="25" Height="25" FontSize="14" FontWeight="Bold"/>
+        <Button Content="-" x:Name="MinusButton" Click="MinusClicked" HorizontalAlignment="Left" Margin="40,0,0,7" VerticalAlignment="Bottom" Width="25" Height="25" FontSize="14" FontWeight="Bold"/>
+    </Grid>
+</Window>

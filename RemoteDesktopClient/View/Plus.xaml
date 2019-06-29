@@ -1,0 +1,27 @@
+﻿<Window x:Class="RemoteDesktopClient.View.Plus"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RemoteDesktopClient.View"
+        mc:Ignorable="d"
+        Title="Plus" Height="282.374" Width="451.725">
+    <Grid>
+        <Label Content="Jméno:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <Label Content="Host:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <Label Content="Port:" HorizontalAlignment="Left" Margin="10,87,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <Label Content="Uživatel:" HorizontalAlignment="Left" Margin="219,9,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <Label Content="Heslo:" HorizontalAlignment="Left" Margin="219,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <Label Content="Alternatiovní porty" HorizontalAlignment="Left" Margin="10,131,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="83,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"  Text="" x:Name="Name"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="83,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"  Text="" x:Name="Host"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="83,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"  Text="" x:Name="Port"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="297,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16"  Text="" x:Name="User"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="297,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" FontSize="16" Text="" x:Name="Pass"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="10,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" FontSize="16"  Text="" x:Name="Port1"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="110,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" FontSize="16" Text="" x:Name="Port2"/>
+        <TextBox HorizontalAlignment="Left" Height="34" Margin="210,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="95" FontSize="16" Text="" x:Name="Port3"/>
+        <Button Content="Přidat" HorizontalAlignment="Left" Margin="359,221,0,0" VerticalAlignment="Top" Width="75" FontSize="14" Click="AddClicked"/>
+
+    </Grid>
+</Window>
