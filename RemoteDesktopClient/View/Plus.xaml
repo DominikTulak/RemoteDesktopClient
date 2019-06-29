@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RemoteDesktopClient.View"
         mc:Ignorable="d"
-        Title="Plus" Height="282.374" Width="451.725">
+        Title="Přidat položku" Height="282.374" Width="451.725">
     <Grid>
         <Label Content="Jméno:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>
         <Label Content="Host:" HorizontalAlignment="Left" Margin="10,48,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.458,-0.228" FontSize="16"/>

@@ -44,8 +44,6 @@ namespace RemoteDesktopClient.View
         }
         private void AddClicked(object sender, EventArgs e)
         {
-            //MessageBox.Show(pass);
-            pass = "looool";
             try
             {
                 List<int> AlternativePortsList = new List<int>();
@@ -54,9 +52,9 @@ namespace RemoteDesktopClient.View
                 if (Port3.Text != "") { AlternativePortsList.Add(int.Parse(Port3.Text)); }
                 ConfigEditor.AddItem(Host.Text, int.Parse(Port.Text), User.Text, Pass.Text, Name.Text, AlternativePortsList);
                 ConfigEditor.WriteConfigToFile(ConfigEditor.GetFullConfig());
-                MessageBox.Show("Úspěšně přidáno!");
+                MessageBox.Show("Úspěšně přidáno!", "Přidat položku", MessageBoxButton.OK, MessageBoxImage.Asterisk);
                 this.Close();
-            } catch { MessageBox.Show("Chyba v konfigu!"); }
+            } catch { MessageBox.Show("Chyba v konfigu!", "Přidat položku", MessageBoxButton.OK, MessageBoxImage.Error); }
         }
     }
 }

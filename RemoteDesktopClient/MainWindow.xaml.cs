@@ -86,12 +86,13 @@ namespace RemoteDesktopClient
                 GridContent gc = new GridContent();
                 gc.popis = config[i].remoteName;
                 gc.port = config[i].remotePort;
-                gc.stav = config[i].remoteHost;
+                gc.stav = "Neaktivní";
                 gc.color = "red";
                 if (TestPort(config[i].remoteHost, config[i].remotePort))
                 {
                     gc.port = config[i].remotePort;
                     gc.color = "green";
+                    gc.stav = "Aktivní";
                     config[i].workingPort = config[i].remotePort;
                 }
                 else
@@ -102,11 +103,12 @@ namespace RemoteDesktopClient
                         {
                             gc.port = config[i].alternativePorts[j];
                             gc.color = "green";
+                            gc.stav = "Aktivní";
                             config[i].workingPort = config[i].alternativePorts[j];
                         }
                     }
                 }
-                
+                gc.host = config[i].remoteHost + ":" + config[i].workingPort;
                 gc.button = (config[i].remoteName);
                 dataGrid.Items.Add(gc);
                 GridConent.Add(gc);

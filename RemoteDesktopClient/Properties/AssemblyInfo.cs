@@ -10,7 +10,7 @@ using System.Windows;
 [assembly: AssemblyTitle("RemoteDesktopClient")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Dominik Tulak")]
 [assembly: AssemblyProduct("RemoteDesktopClient")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
@@ -51,5 +51,5 @@ using System.Windows;
 // Můžete zadat všechny hodnoty nebo nastavit výchozí číslo buildu a revize pomocí *, jak je vidět níže:
 // pomocí zástupného znaku * takto:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.1.1.0")]
-[assembly: AssemblyFileVersion("1.1.1.0")]
+[assembly: AssemblyVersion("1.2.0.0")]
+[assembly: AssemblyFileVersion("1.2.0.0")]

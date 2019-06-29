@@ -17,7 +17,7 @@
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
-                <DataGridTextColumn Header=" Port" Binding="{Binding port}" Width="*" />
+                <DataGridTextColumn Header=" Host" Binding="{Binding host}" Width="*" />
                 <DataGridTemplateColumn Header="Připojit" Width="*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

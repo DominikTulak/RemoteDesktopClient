@@ -10,6 +10,7 @@ namespace RemoteDesktopClient.Model
     {
         public string popis { get; set; }
         public string stav { get; set; }
+        public string host { get; set; }
         public int port { get; set; }
         public string button { get; set; }
         public string color { get; set; }
