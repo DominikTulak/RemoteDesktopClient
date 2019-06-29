@@ -52,8 +52,8 @@ namespace RemoteDesktopClient.View
                 if (Port1.Text != "") { AlternativePortsList.Add(int.Parse(Port1.Text)); }
                 if (Port2.Text != "") { AlternativePortsList.Add(int.Parse(Port2.Text)); }
                 if (Port3.Text != "") { AlternativePortsList.Add(int.Parse(Port3.Text)); }
-                ConfigEditor2.AddItem(Host.Text, int.Parse(Port.Text), User.Text, Pass.Text, Name.Text, AlternativePortsList);
-                ConfigEditor2.WriteConfigToFile(ConfigEditor2.GetFullConfig());
+                ConfigEditor.AddItem(Host.Text, int.Parse(Port.Text), User.Text, Pass.Text, Name.Text, AlternativePortsList);
+                ConfigEditor.WriteConfigToFile(ConfigEditor.GetFullConfig());
                 MessageBox.Show("Úspěšně přidáno!");
                 this.Close();
             } catch { MessageBox.Show("Chyba v konfigu!"); }

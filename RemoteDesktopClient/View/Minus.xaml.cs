@@ -24,9 +24,9 @@ namespace RemoteDesktopClient.View
         }
         public void RemoveClicked(object sender, RoutedEventArgs e)
         {
-            bool odstraneno = Model.ConfigEditor2.RemoveByName(Name.Text);
+            bool odstraneno = Model.ConfigEditor.RemoveByName(Name.Text);
             MessageBox.Show(odstraneno?"Úspěšně odstraněno!":"Prvek nenalezen!", "Odstranit prvek", MessageBoxButton.OK, odstraneno?MessageBoxImage.Information:MessageBoxImage.Error );
-            if(odstraneno) Model.ConfigEditor2.WriteConfigToFile(Model.ConfigEditor2.GetFullConfig());
+            if(odstraneno) Model.ConfigEditor.WriteConfigToFile(Model.ConfigEditor.GetFullConfig());
             this.Close();
         }
     }

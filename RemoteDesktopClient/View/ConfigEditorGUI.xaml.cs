@@ -20,16 +20,16 @@ namespace RemoteDesktopClient.View
     /// </summary>
     public partial class ConfigEditorGUI : Window
     {
-        List<Config2> conf;
+        List<Config> conf;
         public ConfigEditorGUI()
         {
             InitializeComponent();
             
 
 
-            ConfigEditor2.ReadConfig();
-            conf = ConfigEditor2.GetFullConfig();
-            foreach(Config2 config in conf)
+            ConfigEditor.ReadConfig();
+            conf = ConfigEditor.GetFullConfig();
+            foreach(Config config in conf)
             {
                 Model.SettingsContent gc = new SettingsContent();
                 gc.name = config.remoteName;
@@ -57,7 +57,7 @@ namespace RemoteDesktopClient.View
             
             try
             {
-                List<Config2> newConfig = new List<Config2>();
+                List<Config> newConfig = new List<Config>();
                 
                 foreach (SettingsContent gc in dataGrid.Items)
                 {
@@ -66,11 +66,11 @@ namespace RemoteDesktopClient.View
                     {
                         alternativePortsList.Add(int.Parse(s));
                     }
-                    newConfig.Add(new Config2(gc.host, int.Parse(gc.port), gc.user, gc.pass, gc.name, alternativePortsList));
+                    newConfig.Add(new Config(gc.host, int.Parse(gc.port), gc.user, gc.pass, gc.name, alternativePortsList));
 
                 }
-                ConfigEditor2.EditConfig(newConfig);
-                ConfigEditor2.WriteConfigToFile(newConfig);
+                ConfigEditor.EditConfig(newConfig);
+                ConfigEditor.WriteConfigToFile(newConfig);
             }
             catch
             {
