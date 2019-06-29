@@ -108,7 +108,7 @@ namespace RemoteDesktopClient
                         }
                     }
                 }
-                gc.host = config[i].remoteHost + ":" + config[i].workingPort;
+                gc.host =  config[i].remoteHost + ":" + ((config[i].workingPort == 0)?config[i].remotePort.ToString():config[i].workingPort.ToString());
                 gc.button = (config[i].remoteName);
                 dataGrid.Items.Add(gc);
                 GridConent.Add(gc);

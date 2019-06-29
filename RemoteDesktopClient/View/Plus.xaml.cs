@@ -18,17 +18,9 @@ namespace RemoteDesktopClient.View
     /// <summary>
     /// Interakční logika pro Plus.xaml
     /// </summary>
-    public partial class Plus : INotifyPropertyChanged
+    public partial class Plus
     {
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChangedEventHandler handler = PropertyChanged;
-            if (handler != null)
-            {
-                handler(this, new PropertyChangedEventArgs(name));
-            }
-        }
+        
         public string name;
         public string host;
         public string user;
