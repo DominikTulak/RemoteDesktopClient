@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="RemoteDesktop Client - Načítání..." Height="450" Width="800" Icon="Dakirby309-Windows-8-Metro-Apps-Remote-Desktop-Metro.ico" Loaded="Window_Loaded" >
     <Grid Name="Content">
-        <DataGrid x:Name="dataGrid" IsReadOnly="True" Margin="10,10,10,37">
+        <DataGrid x:Name="dataGrid" IsReadOnly="True" Margin="10,10,10,42">
             <DataGrid.Columns>
                 <DataGridTextColumn Header=" Název" Binding="{Binding popis}" Width="*"  />
                 <DataGridTemplateColumn Header=" Stav"  Width="*" >
@@ -27,9 +27,9 @@
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Nastavení" Margin="0,0,10,10" Width="67" Height="27" Click="Button_Click_1" HorizontalAlignment="Right" VerticalAlignment="Bottom" IsEnabled="False"/>
-        <Button Content="Obnovit" HorizontalAlignment="Right" Margin="0,0,82,10" VerticalAlignment="Bottom" Width="75" Height="27" Click="RefreshClicked"/>
+        <Button Content="Obnovit" HorizontalAlignment="Left" Margin="70,0,0,7" VerticalAlignment="Bottom" Width="75" Height="25" Click="RefreshClicked"/>
         <Button Content="+" x:Name="PlusButton" Click="PlusClicked" HorizontalAlignment="Left" Margin="10,0,0,7" VerticalAlignment="Bottom" Width="25" Height="25" FontSize="14" FontWeight="Bold"/>
         <Button Content="-" x:Name="MinusButton" Click="MinusClicked" HorizontalAlignment="Left" Margin="40,0,0,7" VerticalAlignment="Bottom" Width="25" Height="25" FontSize="14" FontWeight="Bold"/>
-    </Grid>
+        <Label x:Name="Version" Content="Dominik Tulak, 2019" HorizontalAlignment="Right" Margin="0,0,10,6" VerticalAlignment="Bottom"/>
+        </Grid>
 </Window>

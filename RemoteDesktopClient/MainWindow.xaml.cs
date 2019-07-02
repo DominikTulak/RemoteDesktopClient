@@ -22,12 +22,15 @@ namespace RemoteDesktopClient
     /// </summary>
     public partial class MainWindow : Window
     {
+        string version = "1.3.0";
         Config conf;
         List<Config> config;
         List<GridContent> GridConent;
         public MainWindow()
         {
             InitializeComponent();
+            //Updater.CheckForUpdates(version);
+            
             
 
         }
@@ -77,6 +80,7 @@ namespace RemoteDesktopClient
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             dataGrid.Items.Clear();
+            Version.Content = "RemoteDesktopClient " + version + ", Dominik Tulak, 2019";
             GridConent = new List<GridContent>();
             ConfigEditor.ReadConfig();
             config = ConfigEditor.GetFullConfig();
